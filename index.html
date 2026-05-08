@@ -3,90 +3,720 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Telgo Power Projects Pvt Ltd</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .container {
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            max-width: 500px;
-            width: 90%;
-        }
-        .status-badge {
-            background: #e67e22;
-            color: white;
-            padding: 6px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        h1 {
-            font-size: 2rem;
-            margin: 10px 0;
-            letter-spacing: 1px;
-        }
-        p {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-        .loader {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(255,255,255,0.1);
-            border-top: 3px solid #e67e22;
-            border-radius: 50%;
-            margin: 30px auto;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        
-        .dev-footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-        }
-        .dev-footer a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    <meta name="description" content="Telgo Power Projects Pvt. Ltd. delivers utility infrastructure, underground cable laying, RMU installations, testing, and power distribution solutions across Kerala.">
+    <meta name="theme-color" content="#07162e">
+    <title>Telgo Power Projects Pvt. Ltd. | Power Infrastructure Solutions</title>
+    <link rel="icon" type="image/png" href="assets/Websitephotos/telgo-logo-cropped.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/site.css">
+    <script type="module" src="assets/scripts/site.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="status-badge">Site Under Construction</div>
-        <h1>Telgo Power Projects</h1>
-        <p>Expertise in LT, HT & EHT Underground Cabling and Infrastructure.</p>
-        
-        <div class="loader"></div>
-        
-        <p>Our digital command center and client portal are being deployed.</p>
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14"></path>
+            <path d="M13 5l7 7-7 7"></path>
+        </symbol>
+        <symbol id="icon-bolt" viewBox="0 0 24 24">
+            <path d="M13 2L5 13h5l-1 9 8-11h-5l1-9z"></path>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l7 3v6c0 4.5-2.8 7.9-7 9-4.2-1.1-7-4.5-7-9V6l7-3z"></path>
+            <path d="M9 12l2 2 4-4"></path>
+        </symbol>
+        <symbol id="icon-award" viewBox="0 0 24 24">
+            <circle cx="12" cy="9" r="4.5"></circle>
+            <path d="M8.5 14.5L7 21l5-2.5L17 21l-1.5-6.5"></path>
+            <path d="M10.5 9l1 1 2-2"></path>
+        </symbol>
+        <symbol id="icon-users" viewBox="0 0 24 24">
+            <path d="M9 11a3 3 0 100-6 3 3 0 000 6z"></path>
+            <path d="M16.5 10a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"></path>
+            <path d="M4 19a5 5 0 0110 0"></path>
+            <path d="M13 19a4 4 0 018 0"></path>
+        </symbol>
+        <symbol id="icon-network" viewBox="0 0 24 24">
+            <path d="M12 3l6 3.5v7L12 17l-6-3.5v-7L12 3z"></path>
+            <path d="M12 7.5l3 1.7v3.6L12 14.5 9 12.8V9.2l3-1.7z"></path>
+            <path d="M12 17v4"></path>
+            <path d="M6 13.5l-3 1.7"></path>
+            <path d="M18 13.5l3 1.7"></path>
+        </symbol>
+        <symbol id="icon-clipboard" viewBox="0 0 24 24">
+            <rect x="6" y="5" width="12" height="16" rx="2"></rect>
+            <path d="M9 5.5h6v-2H9z"></path>
+            <path d="M9 11h6"></path>
+            <path d="M9 15h4"></path>
+        </symbol>
+        <symbol id="icon-route" viewBox="0 0 24 24">
+            <path d="M6 6a2 2 0 114 0 2 2 0 01-4 0z"></path>
+            <path d="M14 18a2 2 0 114 0 2 2 0 01-4 0z"></path>
+            <path d="M8 8c2 1 4 1.5 5.5 3S15 15 16 16"></path>
+            <path d="M10 10c1.5-.8 3-2.3 4-4"></path>
+        </symbol>
+        <symbol id="icon-grid" viewBox="0 0 24 24">
+            <path d="M12 3v18"></path>
+            <path d="M6 7h12"></path>
+            <path d="M4 21h16"></path>
+            <path d="M8 7L5 21"></path>
+            <path d="M16 7l3 14"></path>
+        </symbol>
+        <symbol id="icon-automation" viewBox="0 0 24 24">
+            <rect x="4" y="5" width="7" height="14" rx="1.5"></rect>
+            <rect x="13" y="5" width="7" height="14" rx="1.5"></rect>
+            <path d="M7.5 9h0"></path>
+            <path d="M7.5 12h0"></path>
+            <path d="M7.5 15h0"></path>
+            <path d="M16.5 9h0"></path>
+            <path d="M16.5 12h0"></path>
+            <path d="M16.5 15h0"></path>
+        </symbol>
+        <symbol id="icon-cable" viewBox="0 0 24 24">
+            <path d="M9 6a4 4 0 014 4v4a4 4 0 11-8 0"></path>
+            <path d="M15 18a4 4 0 104-4v-1"></path>
+            <path d="M18 5v6"></path>
+            <path d="M15 8h6"></path>
+        </symbol>
+        <symbol id="icon-lamp" viewBox="0 0 24 24">
+            <path d="M12 3a5 5 0 015 5c0 2.1-1 3.3-2.2 4.7-.9 1-1.8 2-1.8 3.3h-2c0-1.3-.9-2.3-1.8-3.3C8 11.3 7 10.1 7 8a5 5 0 015-5z"></path>
+            <path d="M10 19h4"></path>
+            <path d="M9 22h6"></path>
+        </symbol>
+        <symbol id="icon-timer" viewBox="0 0 24 24">
+            <circle cx="12" cy="14" r="7"></circle>
+            <path d="M12 14l3-2"></path>
+            <path d="M9 2h6"></path>
+            <path d="M12 7V4"></path>
+        </symbol>
+        <symbol id="icon-truck" viewBox="0 0 24 24">
+            <path d="M3 7h11v9H3z"></path>
+            <path d="M14 10h4l3 3v3h-7z"></path>
+            <circle cx="7" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+        </symbol>
+        <symbol id="icon-tools" viewBox="0 0 24 24">
+            <path d="M5 19l5-5"></path>
+            <path d="M5 14l5 5"></path>
+            <path d="M13 5l6 6"></path>
+            <path d="M16 4l4 4"></path>
+            <path d="M12 6l6 6"></path>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path d="M6 9v9"></path>
+            <path d="M6 6h0"></path>
+            <path d="M11 18V9"></path>
+            <path d="M11 12a3 3 0 016 0v6"></path>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path d="M6 4h4l2 5-2.5 1.5a16 16 0 005 5L16 13l5 2v4c0 1.1-.9 2-2 2C10.2 21 3 13.8 3 5a2 2 0 012-2h1z"></path>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M4 7l8 6 8-6"></path>
+        </symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24">
+            <path d="M12 21s6-5.3 6-11a6 6 0 10-12 0c0 5.7 6 11 6 11z"></path>
+            <circle cx="12" cy="10" r="2.5"></circle>
+        </symbol>
+    </svg>
 
-        <div class="dev-footer">
-            Powered & Developed by <br>
-            <a href="https://techauditpros.com">TechAuditPros.com</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <div class="container">
+            <div class="header-shell">
+                <a class="brand" href="#home" aria-label="Telgo Power Projects home">
+                    <img src="assets/Websitephotos/telgo-logo-cropped.png" alt="Telgo Power Projects Pvt. Ltd.">
+                </a>
+                <nav class="site-nav" id="site-nav" aria-label="Primary">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#expertise">Our Expertise</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#fleet">Fleet &amp; Capacity</a>
+                    <a href="#safety">Safety</a>
+                    <a href="#contact">Contact Us</a>
+                </nav>
+                <a class="button button--primary header-cta" href="#contact">
+                    <span>Get In Touch</span>
+                </a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="home">
+            <div class="hero-media">
+                <img src="assets/Websitephotos/hero-power-grid-team.webp" alt="Telgo engineers planning a power infrastructure project beside transmission lines." fetchpriority="high">
+            </div>
+            <div class="hero-scrim"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow">Powering Today, Energizing Tomorrow</p>
+                    <h1>Engineering Reliable Power Solutions for a Stronger Future</h1>
+                    <p class="hero-lead">From concept to commissioning, we deliver end-to-end electrical infrastructure solutions with precision, safety, and operational discipline.</p>
+                    <div class="hero-actions">
+                        <a class="button button--primary" href="#expertise">
+                            <span>Explore Our Services</span>
+                            <svg class="button-icon"><use href="#icon-arrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container hero-stats-wrap">
+                <div class="stats-band" data-reveal aria-label="Company highlights">
+                    <article class="metric-card">
+                        <div class="icon-chip">
+                            <svg class="icon"><use href="#icon-award"></use></svg>
+                        </div>
+                        <div>
+                            <p class="metric-value"><span data-counter="3" data-suffix="+">3+</span></p>
+                            <p class="metric-label">Years of Excellence</p>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="icon-chip">
+                            <svg class="icon"><use href="#icon-clipboard"></use></svg>
+                        </div>
+                        <div>
+                            <p class="metric-value"><span data-counter="50" data-suffix="+">50+</span></p>
+                            <p class="metric-label">Projects Completed</p>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="icon-chip">
+                            <svg class="icon"><use href="#icon-users"></use></svg>
+                        </div>
+                        <div>
+                            <p class="metric-value"><span data-counter="100" data-suffix="+">100+</span></p>
+                            <p class="metric-label">Skilled Professionals</p>
+                        </div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="icon-chip">
+                            <svg class="icon"><use href="#icon-network"></use></svg>
+                        </div>
+                        <div>
+                            <p class="metric-value"><span data-counter="20" data-suffix="+">20+</span></p>
+                            <p class="metric-label">Clients Across Kerala</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light about" id="about">
+            <div class="container about-grid">
+                <div class="about-mosaic" data-reveal>
+                    <figure class="mosaic-card mosaic-card--tall">
+                        <img src="assets/Websitephotos/about-street-light-project.webp" alt="Electrical technician working on distribution panel equipment." loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="mosaic-card">
+                        <img src="assets/Websitephotos/kseb-rdss-imperial-project.webp" alt="Transmission network upgrade during golden hour." loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="mosaic-card">
+                        <img src="assets/Websitephotos/hdd-cable-drum-transport.webp" alt="Cable drum transport prepared for underground utility deployment." loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="mosaic-card mosaic-card--wide">
+                        <img src="assets/Websitephotos/mannam-substation-commissioning.webp" alt="Commissioned substation infrastructure ready for energization." loading="lazy" decoding="async">
+                    </figure>
+                </div>
+                <div class="section-copy" data-reveal>
+                    <p class="eyebrow eyebrow--light">Who We Are</p>
+                    <h2>Your Trusted Partner in Power Infrastructure</h2>
+                    <p>Telgo Power Projects Pvt. Ltd. is a Kerala-based electrical engineering company specializing in underground cabling, distribution strengthening, RMU integration, testing, and high-quality power infrastructure execution.</p>
+                    <p>With a disciplined field team, modern fleet, and an uncompromising focus on safety, we deliver dependable utility outcomes for public agencies, industrial clients, airports, urban developments, and growth corridors.</p>
+                    <div class="feature-grid">
+                        <article class="feature-pill">
+                            <div class="icon-chip icon-chip--light">
+                                <svg class="icon"><use href="#icon-shield"></use></svg>
+                            </div>
+                            <div>
+                                <h3>Safety First</h3>
+                                <p>Rigorous PPE protocols, supervision, and audit culture on every site.</p>
+                            </div>
+                        </article>
+                        <article class="feature-pill">
+                            <div class="icon-chip icon-chip--light">
+                                <svg class="icon"><use href="#icon-award"></use></svg>
+                            </div>
+                            <div>
+                                <h3>Quality Assurance</h3>
+                                <p>Structured inspection workflows from trenching to final energization.</p>
+                            </div>
+                        </article>
+                        <article class="feature-pill">
+                            <div class="icon-chip icon-chip--light">
+                                <svg class="icon"><use href="#icon-timer"></use></svg>
+                            </div>
+                            <div>
+                                <h3>On-Time Delivery</h3>
+                                <p>Execution planning that protects milestones, permits, and commissioning dates.</p>
+                            </div>
+                        </article>
+                        <article class="feature-pill">
+                            <div class="icon-chip icon-chip--light">
+                                <svg class="icon"><use href="#icon-users"></use></svg>
+                            </div>
+                            <div>
+                                <h3>Expert Workforce</h3>
+                                <p>Experienced engineers, supervisors, operators, and testing specialists.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark expertise" id="expertise">
+            <div class="container expertise-layout">
+                <div class="section-copy section-copy--inverted" data-reveal>
+                    <p class="eyebrow">Our Expertise</p>
+                    <h2>End-to-End Power Infrastructure Solutions</h2>
+                    <p>From feasibility and route surveys to underground cable laying, street lighting, RMU installations, and system commissioning, we deliver execution-ready engineering support across the complete project lifecycle.</p>
+                    <a class="button button--primary" href="#projects">
+                        <span>Explore All Services</span>
+                        <svg class="button-icon"><use href="#icon-arrow"></use></svg>
+                    </a>
+                </div>
+                <div class="expertise-panel" data-reveal>
+                    <img class="expertise-art" src="assets/Websitephotos/background-hero-image.webp" alt="" loading="lazy" decoding="async">
+                    <div class="expertise-overlay"></div>
+                    <div class="service-grid">
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-clipboard"></use></svg>
+                            </div>
+                            <h3>Power Feasibility Study</h3>
+                            <p>Detailed analysis and feasibility reports for reliable project planning.</p>
+                        </article>
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-route"></use></svg>
+                            </div>
+                            <h3>Detailed Route Survey</h3>
+                            <p>Utility mapping, GPR scanning, drawings, and accurate route definition.</p>
+                        </article>
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-grid"></use></svg>
+                            </div>
+                            <h3>Distribution Line Construction</h3>
+                            <p>LT, HT, and EHT line construction, strengthening, and network upgrades.</p>
+                        </article>
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-automation"></use></svg>
+                            </div>
+                            <h3>RMU &amp; Automation Units</h3>
+                            <p>Smart distribution packages for dependable switching and utility control.</p>
+                        </article>
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-cable"></use></svg>
+                            </div>
+                            <h3>UG Cable Laying Works</h3>
+                            <p>Precision-driven LT, HT, and EHT underground cable execution with controlled safety processes.</p>
+                        </article>
+                        <article class="glass-card service-card">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-lamp"></use></svg>
+                            </div>
+                            <h3>Street Light Works</h3>
+                            <p>Urban and rural lighting infrastructure with clean coordination and durable finish quality.</p>
+                        </article>
+                        <article class="glass-card service-card service-card--wide">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-tools"></use></svg>
+                            </div>
+                            <h3>Testing &amp; Commissioning</h3>
+                            <p>HV testing, earth resistance verification, RMU checks, and dependable project handover support.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light projects" id="projects">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--light">Signature Projects &amp; Achievements</p>
+                        <h2>Delivering Excellence Across Kerala</h2>
+                        <p>From complex crossings to airport-linked power infrastructure, our project portfolio reflects precision engineering, strong field control, and timely delivery.</p>
+                    </div>
+                    <div class="carousel-controls" aria-label="Project navigation">
+                        <button class="control-button" type="button" data-carousel-prev="projects-carousel" aria-label="Previous projects">
+                            <svg class="icon"><use href="#icon-arrow"></use></svg>
+                        </button>
+                        <button class="control-button control-button--next" type="button" data-carousel-next="projects-carousel" aria-label="Next projects">
+                            <svg class="icon"><use href="#icon-arrow"></use></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel" id="projects-carousel" data-carousel data-reveal>
+                    <div class="carousel-track">
+                        <article class="project-card">
+                            <figure class="project-media">
+                                <img src="assets/Websitephotos/vembanad-backwater-crossing.webp" alt="Marine crossing execution at Vembanad backwaters." loading="lazy" decoding="async">
+                            </figure>
+                            <div class="project-content">
+                                <h3>Vembanad Backwater Crossing</h3>
+                                <p>A landmark HDD crossing involving a 285-metre waterway installation executed with strict depth control and marine coordination.</p>
+                                <span class="project-tag">HDD Crossing</span>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <figure class="project-media">
+                                <img src="assets/Websitephotos/kseb-rdss-imperial-project.webp" alt="KSEB RDSS distribution network project site." loading="lazy" decoding="async">
+                            </figure>
+                            <div class="project-content">
+                                <h3>KSEB RDSS Imperial Project</h3>
+                                <p>Execution of a large-scale electrical distribution upgrade package supporting a resilient urban network footprint.</p>
+                                <span class="project-tag">20 km Network</span>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <figure class="project-media">
+                                <img src="assets/Websitephotos/cial-33kv-cable-laying.webp" alt="33 kV cable laying project aligned with airport infrastructure." loading="lazy" decoding="async">
+                            </figure>
+                            <div class="project-content">
+                                <h3>CIAL 33 kV Cable Laying</h3>
+                                <p>Strategic high-voltage cable installation supporting critical airport-linked electrical infrastructure.</p>
+                                <span class="project-tag">33 kV Installation</span>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <figure class="project-media">
+                                <img src="assets/Websitephotos/mannam-substation-commissioning.webp" alt="Completed substation and power equipment commissioning works." loading="lazy" decoding="async">
+                            </figure>
+                            <div class="project-content">
+                                <h3>Mannam Substation Commissioning</h3>
+                                <p>33 kV cable laying, integration, and systematic commissioning for dependable field energization.</p>
+                                <span class="project-tag">33 kV Commissioning</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark fleet" id="fleet">
+            <div class="container">
+                <div class="section-head section-head--stacked" data-reveal>
+                    <div>
+                        <p class="eyebrow">Fleet &amp; Capacity</p>
+                        <h2>Advanced Equipment. Proven Capability.</h2>
+                        <p>Our fleet and testing infrastructure are configured for high-control utility execution, remote access logistics, cable drum handling, and dependable site readiness.</p>
+                    </div>
+                    <a class="button button--primary" href="#contact">
+                        <span>View Our Fleet</span>
+                        <svg class="button-icon"><use href="#icon-arrow"></use></svg>
+                    </a>
+                </div>
+                <div class="fleet-grid" data-reveal>
+                    <article class="fleet-card">
+                        <figure class="fleet-media">
+                            <img src="assets/Websitephotos/xcmg-hdd-machine.webp" alt="XCMG HDD machine used for trenchless cable and utility crossings." loading="lazy" decoding="async">
+                        </figure>
+                        <div class="fleet-content">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-grid"></use></svg>
+                            </div>
+                            <h3>HDD Machines (Trenchless)</h3>
+                            <ul class="detail-list">
+                                <li>32-ton XCMG XZ320DX, 2024 model</li>
+                                <li>20-ton Hanlyma IR520, 2018 model</li>
+                                <li>Engineered for guided crossings and utility-sensitive corridors</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="fleet-card">
+                        <figure class="fleet-media">
+                            <img src="assets/Websitephotos/eicher-jumbo-truck.webp" alt="Eicher jumbo truck configured for project logistics and heavy material support." loading="lazy" decoding="async">
+                        </figure>
+                        <div class="fleet-thumb-row">
+                            <img src="assets/Websitephotos/eicher-hydraulic-ramp.webp" alt="Hydraulic ramp transport support vehicle." loading="lazy" decoding="async">
+                            <img src="assets/Websitephotos/ashok-leyland-tanker.webp" alt="Ashok Leyland tanker used for site support operations." loading="lazy" decoding="async">
+                        </div>
+                        <div class="fleet-content">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-truck"></use></svg>
+                            </div>
+                            <h3>Logistics &amp; Support Fleet</h3>
+                            <ul class="detail-list">
+                                <li>Eicher jumbo carrier for mobilization and heavy components</li>
+                                <li>Hydraulic ramp support for loading, unloading, and plant transfer</li>
+                                <li>Ashok Leyland tanker support for field and commissioning operations</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="fleet-card">
+                        <figure class="fleet-media">
+                            <img src="assets/Websitephotos/hdd-cable-drum-transport.webp" alt="Cable drum transport setup prepared for underground utility works." loading="lazy" decoding="async">
+                        </figure>
+                        <div class="fleet-content">
+                            <div class="icon-chip">
+                                <svg class="icon"><use href="#icon-tools"></use></svg>
+                            </div>
+                            <h3>Drum Handling &amp; Site Support</h3>
+                            <ul class="detail-list">
+                                <li>Coordinated cable drum transport for long-route utility packages</li>
+                                <li>Field readiness for trenching, pulling, reinstatement, and handover stages</li>
+                                <li>Testing support for HV kits, digital meggers, and earth resistance checks</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light why">
+            <div class="container">
+                <div class="why-shell" data-reveal>
+                    <div class="section-head section-head--compact">
+                        <div>
+                            <p class="eyebrow eyebrow--light">Why Choose Telgo</p>
+                            <h2>Built on Trust. Driven by Excellence.</h2>
+                        </div>
+                    </div>
+                    <div class="why-grid">
+                        <article class="why-card">
+                            <div class="icon-chip icon-chip--light"><svg class="icon"><use href="#icon-shield"></use></svg></div>
+                            <h3>Safety First</h3>
+                            <p>Strict adherence to field safety standards, PPE rules, and documented site controls.</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="icon-chip icon-chip--light"><svg class="icon"><use href="#icon-award"></use></svg></div>
+                            <h3>Quality Assured</h3>
+                            <p>Disciplined execution backed by inspection gates, testing workflows, and punch closure.</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="icon-chip icon-chip--light"><svg class="icon"><use href="#icon-timer"></use></svg></div>
+                            <h3>On-Time Delivery</h3>
+                            <p>Milestone-led planning that protects execution speed without sacrificing control.</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="icon-chip icon-chip--light"><svg class="icon"><use href="#icon-users"></use></svg></div>
+                            <h3>Skilled Professionals</h3>
+                            <p>Experienced teams with technical depth in power distribution and utility works.</p>
+                        </article>
+                        <article class="why-card">
+                            <div class="icon-chip icon-chip--light"><svg class="icon"><use href="#icon-network"></use></svg></div>
+                            <h3>End-to-End Delivery</h3>
+                            <p>From survey to commissioning, we coordinate the full execution chain under one team.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark clients" id="clients">
+            <div class="clients-backdrop"></div>
+            <div class="container clients-layout">
+                <div class="section-copy section-copy--inverted" data-reveal>
+                    <p class="eyebrow">Trusted by Leaders</p>
+                    <h2>Strong Partnerships. Successful Deliveries.</h2>
+                    <p>We take pride in supporting government bodies, infrastructure developers, airports, industrial stakeholders, and premium real estate groups across Kerala.</p>
+                </div>
+                <div class="logo-wall" data-reveal aria-label="Trusted client logos">
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-kseb.webp" alt="KSEB"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-cial.webp" alt="CIAL"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-kinfra.webp" alt="Kinfra"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-sobha.webp" alt="Sobha Realty"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-confident-group.webp" alt="Confident Group"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-asset-homes.webp" alt="Asset Homes"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-good-earth.webp" alt="Good Earth Builders and Developers"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-kochi-metro.webp" alt="Kochi Metro"></figure>
+                    <figure class="logo-card"><img src="assets/Websitephotos/logo-smart-city-projects.webp" alt="Smart City Projects"></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark safety" id="safety">
+            <div class="container safety-layout">
+                <div class="section-copy section-copy--inverted" data-reveal>
+                    <p class="eyebrow">Safety &amp; Compliance</p>
+                    <h2>Safety is Our Strength.</h2>
+                    <p>Every Telgo project follows structured safety protocols, compliance checkpoints, and disciplined site supervision to ensure reliable execution in high-voltage environments.</p>
+                    <ul class="check-list">
+                        <li>CEA compliant operations and approved field methodologies</li>
+                        <li>PPE enforcement, toolbox talks, and documented permit controls</li>
+                        <li>Risk assessment, mitigation planning, and escalation discipline</li>
+                        <li>Regular training, audits, and close coordination with client representatives</li>
+                    </ul>
+                </div>
+                <div class="safety-visual" data-reveal>
+                    <figure class="safety-image">
+                        <img src="assets/Websitephotos/background-hero-image.webp" alt="Telgo engineers reviewing electrical infrastructure in a controlled substation environment." loading="lazy" decoding="async">
+                    </figure>
+                    <aside class="commitment-card">
+                        <div class="icon-chip">
+                            <svg class="icon"><use href="#icon-shield"></use></svg>
+                        </div>
+                        <h3>Our Commitment</h3>
+                        <p>Every package is backed by clear supervision, documented testing, quality sign-off, and reliable site stewardship.</p>
+                        <ul class="check-list check-list--compact">
+                            <li>Safe work environment</li>
+                            <li>Zero compromise on quality</li>
+                            <li>Sustainable field practices</li>
+                            <li>Community responsibility</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="eyebrow">Client Testimonials</p>
+                        <h2>What Our Clients Say</h2>
+                    </div>
+                    <div class="carousel-controls" aria-label="Testimonial navigation">
+                        <button class="control-button" type="button" data-carousel-prev="testimonials-carousel" aria-label="Previous testimonials">
+                            <svg class="icon"><use href="#icon-arrow"></use></svg>
+                        </button>
+                        <button class="control-button control-button--next" type="button" data-carousel-next="testimonials-carousel" aria-label="Next testimonials">
+                            <svg class="icon"><use href="#icon-arrow"></use></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="testimonials-grid" data-reveal>
+                    <div class="carousel" id="testimonials-carousel" data-carousel>
+                        <div class="carousel-track">
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">Telgo Power Projects delivered the Vembanad crossing package with exceptional precision, coordination, and professionalism. The team maintained control from planning through execution.</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/Websitephotos/logo-kseb.webp" alt="KSEB logo" loading="lazy" decoding="async">
+                                    <div>
+                                        <strong>Executive Engineer</strong>
+                                        <span>KSEB</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">Their expertise in underground cabling and their commitment to safety standards are commendable. A dependable partner for critical infrastructure works.</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/Websitephotos/logo-cial.webp" alt="CIAL logo" loading="lazy" decoding="async">
+                                    <div>
+                                        <strong>Project Manager</strong>
+                                        <span>CIAL</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="testimonial-card">
+                                <p class="testimonial-quote">Timely execution, disciplined quality control, and reliable field support throughout the project. We look forward to future collaborations with the Telgo team.</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/Websitephotos/logo-sobha.webp" alt="Sobha Realty logo" loading="lazy" decoding="async">
+                                    <div>
+                                        <strong>Project Head</strong>
+                                        <span>Sobha Realty</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-dots" data-carousel-dots></div>
+                    </div>
+                    <figure class="testimonial-visual">
+                        <img src="assets/Websitephotos/kseb-rdss-imperial-project.webp" alt="Utility upgrade work executed by Telgo Power Projects." loading="lazy" decoding="async">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta" id="contact">
+            <div class="container">
+                <div class="cta-shell" data-reveal>
+                    <div class="cta-mark">
+                        <svg class="icon"><use href="#icon-bolt"></use></svg>
+                    </div>
+                    <div class="cta-copy">
+                        <h2>Ready to Power Your Next Project?</h2>
+                        <p>Let's build stronger, safer, and more resilient electrical infrastructure together.</p>
+                    </div>
+                    <div class="cta-action">
+                        <a class="button button--light" href="mailto:info@telgopowerprojects.com">
+                            <span>Get In Touch</span>
+                            <svg class="button-icon"><use href="#icon-arrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/Websitephotos/telgo-logo-cropped.png" alt="Telgo Power Projects Pvt. Ltd.">
+                <p>Utility infrastructure specialists delivering underground cabling, distribution strengthening, testing, and commissioning support across Kerala.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#expertise">Our Expertise</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#fleet">Fleet &amp; Capacity</a></li>
+                    <li><a href="#safety">Safety</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Core Services</h3>
+                <ul class="footer-links">
+                    <li>Power feasibility studies</li>
+                    <li>Distribution line construction</li>
+                    <li>UG cable laying works</li>
+                    <li>RMU &amp; automation units</li>
+                    <li>Street light works</li>
+                    <li>Testing &amp; commissioning</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Info</h3>
+                <ul class="contact-list">
+                    <li>
+                        <svg class="icon"><use href="#icon-location"></use></svg>
+                        <span>Thrippunithura, Kochi, Kerala 682301</span>
+                    </li>
+                    <li>
+                        <svg class="icon"><use href="#icon-phone"></use></svg>
+                        <a href="tel:+919847012345">+91 98470 12345</a>
+                    </li>
+                    <li>
+                        <svg class="icon"><use href="#icon-mail"></use></svg>
+                        <a href="mailto:info@telgopowerprojects.com">info@telgopowerprojects.com</a>
+                    </li>
+                </ul>
+                <div class="contact-social">
+                    <a class="social-button" href="mailto:info@telgopowerprojects.com" aria-label="Email Telgo Power Projects">
+                        <svg class="icon"><use href="#icon-mail"></use></svg>
+                    </a>
+                    <a class="social-button" href="tel:+919847012345" aria-label="Call Telgo Power Projects">
+                        <svg class="icon"><use href="#icon-phone"></use></svg>
+                    </a>
+                    <a class="social-button" href="https://maps.google.com/?q=Thrippunithura+Kochi+Kerala" aria-label="Find Telgo Power Projects in Kochi">
+                        <svg class="icon"><use href="#icon-location"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year></span> Telgo Power Projects Pvt. Ltd. All rights reserved.</p>
+            <p>CIN and GST details available upon project qualification.</p>
+        </div>
+    </footer>
 </body>
 </html>
