@@ -1,4 +1,5 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.documentElement.classList.add("reveal-ready");
 
 const initHeader = () => {
     const header = document.querySelector(".site-header");
@@ -82,7 +83,17 @@ const initReveals = () => {
         rootMargin: "0px 0px -40px 0px",
     });
 
-    revealItems.forEach((item) => observer.observe(item));
+    revealItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        const isInInitialViewport = rect.top < window.innerHeight - 40 && rect.bottom > 0;
+
+        if (isInInitialViewport) {
+            item.classList.add("is-visible");
+            return;
+        }
+
+        observer.observe(item);
+    });
 };
 
 const animateCounter = (element) => {
