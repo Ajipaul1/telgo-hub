@@ -149,11 +149,20 @@ const initPointerDepth = () => {
 
             surface.style.setProperty("--pointer-x", `${x.toFixed(2)}%`);
             surface.style.setProperty("--pointer-y", `${y.toFixed(2)}%`);
+
+            if (surface.matches(".project-card, .fleet-card, .testimonial-card")) {
+                const tiltX = ((x - 50) * 0.045).toFixed(2);
+                const tiltY = ((50 - y) * 0.035).toFixed(2);
+                surface.style.setProperty("--tilt-x", `${tiltX}deg`);
+                surface.style.setProperty("--tilt-y", `${tiltY}deg`);
+            }
         }, { passive: true });
 
         surface.addEventListener("pointerleave", () => {
             surface.style.removeProperty("--pointer-x");
             surface.style.removeProperty("--pointer-y");
+            surface.style.removeProperty("--tilt-x");
+            surface.style.removeProperty("--tilt-y");
         }, { passive: true });
     });
 };
