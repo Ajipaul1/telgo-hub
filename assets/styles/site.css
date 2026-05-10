@@ -3380,10 +3380,10 @@ h2 {
 
 .logo-card {
     min-height: clamp(112px, 8.6vw, 148px);
-    padding: clamp(8px, 1vw, 14px);
+    padding: 0;
     border: 1px solid transparent;
     background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(242, 248, 253, 0.97)) padding-box,
+        linear-gradient(180deg, #ffffff, #ffffff) padding-box,
         linear-gradient(135deg, rgba(29, 229, 242, 0.34), rgba(255, 255, 255, 0.5), rgba(110, 54, 239, 0.34)) border-box;
     background-size: auto, 240% 240%;
     overflow: hidden;
@@ -3406,12 +3406,13 @@ h2 {
 }
 
 .logo-card img {
-    width: 96%;
-    height: clamp(72px, 6.8vw, 106px);
+    width: 100%;
+    height: 100%;
     max-height: none;
-    max-width: 96%;
+    max-width: none;
     object-fit: contain;
-    transform: translate3d(0, 0, 0) scale(1.02);
+    background: #ffffff;
+    transform: translate3d(0, 0, 0) scale(1.24);
 }
 
 .logo-card:hover {
@@ -3421,7 +3422,7 @@ h2 {
 }
 
 .logo-card:hover img {
-    transform: translate3d(0, 0, 0) scale(1.11);
+    transform: translate3d(0, 0, 0) scale(1.32);
 }
 
 .logo-card > img {
@@ -3508,12 +3509,12 @@ h2 {
 
     .logo-card {
         min-height: 100px;
-        padding: 10px;
+        padding: 0;
     }
 
     .logo-card img {
-        height: 66px;
-        width: 96%;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -3536,11 +3537,12 @@ h2 {
 
     .logo-card {
         min-height: 84px;
-        padding: 8px;
+        padding: 0;
     }
 
     .logo-card img {
-        height: 58px;
-        width: 98%;
+        height: 100%;
+        width: 100%;
+        transform: translate3d(0, 0, 0) scale(1.18);
     }
 }
