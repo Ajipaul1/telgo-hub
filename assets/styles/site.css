@@ -2853,7 +2853,7 @@ h2 {
 
     .brand,
     .site-header.is-scrolled .brand {
-        max-width: 226px;
+        max-width: 218px;
     }
 
     .site-nav {
@@ -2942,8 +2942,8 @@ h2 {
 
     .brand,
     .site-header.is-scrolled .brand {
-        width: min(192px, calc(100% - 58px));
-        max-width: 192px;
+        width: min(178px, calc(100% - 58px));
+        max-width: 178px;
     }
 
     .hero {
@@ -3197,6 +3197,7 @@ h2 {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     will-change: box-shadow, background-color, border-color;
+    background: #ffffff;
     transition:
         background-color 0.34s var(--ease-premium),
         border-color 0.34s var(--ease-premium),
@@ -3206,14 +3207,20 @@ h2 {
 
 .brand,
 .site-header.is-scrolled .brand {
-    max-width: 332px;
+    max-width: 270px;
     transform: translate3d(0, 0, 0);
     transition: none;
 }
 
+.brand img {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+}
+
 .site-header.is-scrolled .header-shell {
     border-color: rgba(255, 255, 255, 0.38);
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
     box-shadow: 0 20px 54px rgba(8, 24, 46, 0.2);
 }
 
