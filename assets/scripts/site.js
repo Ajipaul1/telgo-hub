@@ -1,6 +1,29 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.documentElement.classList.add("reveal-ready");
 
+const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+const setStaggerIndexes = () => {
+    const staggerGroups = [
+        ".stats-band",
+        ".feature-grid",
+        ".service-grid",
+        ".carousel-track",
+        ".fleet-grid",
+        ".why-grid",
+        ".logo-wall",
+        ".testimonials-grid .carousel-track",
+    ];
+
+    staggerGroups.forEach((selector) => {
+        document.querySelectorAll(selector).forEach((group) => {
+            [...group.children].forEach((child, index) => {
+                child.style.setProperty("--stagger-index", `${Math.min(index, 9)}`);
+            });
+        });
+    });
+};
+
 const initHeader = () => {
     const header = document.querySelector(".site-header");
     const navToggle = document.querySelector(".nav-toggle");
@@ -94,6 +117,94 @@ const initReveals = () => {
 
         observer.observe(item);
     });
+};
+
+const initPointerDepth = () => {
+    if (prefersReducedMotion || !finePointer) {
+        return;
+    }
+
+    const surfaces = [
+        ...document.querySelectorAll([
+            ".button",
+            ".stats-band",
+            ".expertise-panel",
+            ".glass-card",
+            ".project-card",
+            ".fleet-card",
+            ".testimonial-card",
+            ".why-card",
+            ".feature-pill",
+            ".logo-card",
+            ".commitment-card",
+            ".cta-shell",
+        ].join(",")),
+    ];
+
+    surfaces.forEach((surface) => {
+        surface.addEventListener("pointermove", (event) => {
+            const rect = surface.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+            surface.style.setProperty("--pointer-x", `${x.toFixed(2)}%`);
+            surface.style.setProperty("--pointer-y", `${y.toFixed(2)}%`);
+        }, { passive: true });
+
+        surface.addEventListener("pointerleave", () => {
+            surface.style.removeProperty("--pointer-x");
+            surface.style.removeProperty("--pointer-y");
+        }, { passive: true });
+    });
+};
+
+const initMagneticButtons = () => {
+    if (prefersReducedMotion || !finePointer) {
+        return;
+    }
+
+    document.querySelectorAll(".button").forEach((button) => {
+        button.addEventListener("pointermove", (event) => {
+            const rect = button.getBoundingClientRect();
+            const x = event.clientX - rect.left - rect.width / 2;
+            const y = event.clientY - rect.top - rect.height / 2;
+
+            button.style.setProperty("--magnet-x", `${(x * 0.08).toFixed(2)}px`);
+            button.style.setProperty("--magnet-y", `${(y * 0.12).toFixed(2)}px`);
+        }, { passive: true });
+
+        button.addEventListener("pointerleave", () => {
+            button.style.removeProperty("--magnet-x");
+            button.style.removeProperty("--magnet-y");
+        }, { passive: true });
+    });
+};
+
+const initScrollDepth = () => {
+    if (prefersReducedMotion) {
+        return;
+    }
+
+    let ticking = false;
+
+    const syncDepth = () => {
+        const scrollY = window.scrollY;
+        document.documentElement.style.setProperty("--hero-shift", `${Math.min(scrollY * 0.08, 42).toFixed(2)}px`);
+        document.documentElement.style.setProperty("--parallax-soft", `${(scrollY * -0.035).toFixed(2)}px`);
+        ticking = false;
+    };
+
+    const requestSync = () => {
+        if (ticking) {
+            return;
+        }
+
+        ticking = true;
+        window.requestAnimationFrame(syncDepth);
+    };
+
+    syncDepth();
+    window.addEventListener("scroll", requestSync, { passive: true });
 };
 
 const animateCounter = (element) => {
@@ -237,8 +348,12 @@ const initYear = () => {
     });
 };
 
+setStaggerIndexes();
 initHeader();
 initReveals();
 initCounters();
 initCarousels();
+initPointerDepth();
+initMagneticButtons();
+initScrollDepth();
 initYear();
