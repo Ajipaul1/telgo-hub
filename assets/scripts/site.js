@@ -3,6 +3,12 @@ document.documentElement.classList.add("reveal-ready");
 
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+const initPageReady = () => {
+    window.requestAnimationFrame(() => {
+        document.documentElement.classList.add("is-loaded");
+    });
+};
+
 const setStaggerIndexes = () => {
     const staggerGroups = [
         ".stats-band",
@@ -119,6 +125,73 @@ const initReveals = () => {
     });
 };
 
+const initScrollProgress = () => {
+    const progress = document.createElement("div");
+    progress.className = "scroll-progress";
+    progress.setAttribute("aria-hidden", "true");
+    document.body.append(progress);
+
+    let ticking = false;
+
+    const syncProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const amount = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress.style.setProperty("--scroll-progress", `${Math.min(Math.max(amount, 0), 1)}`);
+        ticking = false;
+    };
+
+    const requestSync = () => {
+        if (ticking) {
+            return;
+        }
+
+        ticking = true;
+        window.requestAnimationFrame(syncProgress);
+    };
+
+    syncProgress();
+    window.addEventListener("scroll", requestSync, { passive: true });
+    window.addEventListener("resize", requestSync);
+};
+
+const initActiveNavigation = () => {
+    const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+    const sectionMap = new Map();
+
+    navLinks.forEach((link) => {
+        const section = document.querySelector(link.getAttribute("href"));
+        if (section) {
+            sectionMap.set(section, link);
+        }
+    });
+
+    if (!sectionMap.size) {
+        return;
+    }
+
+    const setActive = (section) => {
+        navLinks.forEach((link) => link.classList.remove("is-active"));
+        document.querySelectorAll("main > section").forEach((item) => item.classList.remove("is-current-section"));
+        sectionMap.get(section)?.classList.add("is-active");
+        section.classList.add("is-current-section");
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]) {
+            setActive(visible[0].target);
+        }
+    }, {
+        rootMargin: "-35% 0px -50% 0px",
+        threshold: [0.12, 0.28, 0.45, 0.62],
+    });
+
+    sectionMap.forEach((_, section) => observer.observe(section));
+};
+
 const initPointerDepth = () => {
     if (prefersReducedMotion || !finePointer) {
         return;
@@ -214,6 +287,36 @@ const initScrollDepth = () => {
 
     syncDepth();
     window.addEventListener("scroll", requestSync, { passive: true });
+};
+
+const initGlobalSpotlight = () => {
+    if (prefersReducedMotion || !finePointer) {
+        return;
+    }
+
+    let pointerX = window.innerWidth * 0.5;
+    let pointerY = window.innerHeight * 0.35;
+    let ticking = false;
+
+    const syncPointer = () => {
+        document.documentElement.style.setProperty("--cursor-x", `${pointerX.toFixed(0)}px`);
+        document.documentElement.style.setProperty("--cursor-y", `${pointerY.toFixed(0)}px`);
+        ticking = false;
+    };
+
+    window.addEventListener("pointermove", (event) => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+
+        if (ticking) {
+            return;
+        }
+
+        ticking = true;
+        window.requestAnimationFrame(syncPointer);
+    }, { passive: true });
+
+    syncPointer();
 };
 
 const animateCounter = (element) => {
@@ -357,12 +460,16 @@ const initYear = () => {
     });
 };
 
+initPageReady();
 setStaggerIndexes();
 initHeader();
+initScrollProgress();
+initActiveNavigation();
 initReveals();
 initCounters();
 initCarousels();
 initPointerDepth();
 initMagneticButtons();
 initScrollDepth();
+initGlobalSpotlight();
 initYear();
