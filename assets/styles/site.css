@@ -4008,3 +4008,84 @@ main > section {
         object-position: 68% center;
     }
 }
+
+/* Mobile header normalization: keep the brand bar compact and only render the menu panel when opened. */
+@media (max-width: 640px) {
+    .site-header,
+    .site-header.is-scrolled {
+        padding-top: 10px;
+        padding-inline: 9px;
+    }
+
+    .site-header .container {
+        width: 100%;
+    }
+
+    .header-shell,
+    .site-header.is-scrolled .header-shell {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        min-height: 64px;
+        padding: 10px 12px;
+        border-radius: 20px;
+        overflow: visible;
+    }
+
+    .brand,
+    .site-header.is-scrolled .brand {
+        width: min(176px, calc(100% - 54px));
+        max-width: 176px;
+    }
+
+    .brand img {
+        display: block;
+        height: auto;
+    }
+
+    .nav-toggle {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-left: 0;
+        flex-basis: auto;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        z-index: 4;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        display: none;
+        gap: 6px;
+        padding: 12px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 22px 48px rgba(8, 24, 46, 0.2);
+        z-index: 3;
+    }
+
+    .site-nav.is-open {
+        display: grid;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .site-nav a,
+    .site-nav a.is-active {
+        padding: 12px 14px;
+        border-radius: 14px;
+    }
+
+    .site-nav a.is-active::before {
+        inset: 0;
+        border-radius: 14px;
+    }
+}
