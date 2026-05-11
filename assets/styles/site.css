@@ -3496,6 +3496,9 @@ h2 {
 }
 
 .logo-card {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 0.62;
     min-height: clamp(112px, 8.6vw, 148px);
     padding: 0;
     border: 1px solid transparent;
@@ -3525,6 +3528,7 @@ h2 {
 .logo-card img {
     width: var(--logo-width, 100%);
     height: var(--logo-height, 100%);
+    display: block;
     max-height: none;
     max-width: none;
     object-fit: var(--logo-fit, contain);
@@ -3565,20 +3569,20 @@ h2 {
 }
 
 .logo-card--kinfra {
-    --logo-width: 126%;
-    --logo-height: 126%;
-    --logo-fit: cover;
-    --logo-position: center 56%;
+    --logo-width: 84%;
+    --logo-height: 84%;
+    --logo-fit: contain;
+    --logo-position: center;
     --logo-scale: 1;
     --logo-hover-scale: 1.04;
-    --logo-mobile-scale: 1.04;
+    --logo-mobile-scale: 1;
 }
 
 .logo-card--sobha {
     --logo-width: 100%;
     --logo-height: 100%;
     --logo-fit: cover;
-    --logo-position: center 78%;
+    --logo-position: center 66%;
     --logo-scale: 1;
     --logo-hover-scale: 1.02;
     --logo-mobile-scale: 1;
@@ -3592,10 +3596,10 @@ h2 {
 }
 
 .logo-card--goodearth {
-    --logo-width: 96%;
-    --logo-height: 96%;
-    --logo-scale: 1.04;
-    --logo-hover-scale: 1.08;
+    --logo-width: 92%;
+    --logo-height: 92%;
+    --logo-scale: 1.02;
+    --logo-hover-scale: 1.06;
     --logo-mobile-scale: 1;
 }
 
