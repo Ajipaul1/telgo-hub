@@ -3565,16 +3565,21 @@ h2 {
 }
 
 .logo-card--kinfra {
-    --logo-scale: 1.06;
-    --logo-hover-scale: 1.12;
+    --logo-width: 126%;
+    --logo-height: 126%;
+    --logo-fit: cover;
+    --logo-position: center 56%;
+    --logo-scale: 1;
+    --logo-hover-scale: 1.04;
+    --logo-mobile-scale: 1.04;
 }
 
 .logo-card--sobha {
-    --logo-width: 118%;
-    --logo-height: 118%;
-    --logo-scale: 1;
+    --logo-width: 88%;
+    --logo-height: 88%;
+    --logo-scale: 1.02;
     --logo-hover-scale: 1.04;
-    --logo-position: center 72%;
+    --logo-mobile-scale: 1;
 }
 
 .logo-card--asset {
@@ -3585,10 +3590,11 @@ h2 {
 }
 
 .logo-card--goodearth {
-    --logo-width: 80%;
-    --logo-height: 80%;
-    --logo-scale: 1;
+    --logo-width: 88%;
+    --logo-height: 88%;
+    --logo-scale: 1.02;
     --logo-hover-scale: 1.05;
+    --logo-mobile-scale: 1;
 }
 
 .logo-card--amrita {
@@ -3598,9 +3604,12 @@ h2 {
 }
 
 .logo-card--bmh {
-    --logo-scale: 1;
+    --logo-width: 94%;
+    --logo-height: 94%;
+    --logo-scale: 1.02;
     --logo-hover-scale: 1.04;
     --logo-inner-pad: 10px 14px;
+    --logo-mobile-scale: 1;
 }
 
 .logo-card:hover::before {
@@ -3717,7 +3726,7 @@ h2 {
     .logo-card img {
         height: 100%;
         width: 100%;
-        transform: translate3d(0, 0, 0) scale(1.18);
+        transform: translate3d(0, 0, 0) scale(var(--logo-mobile-scale, var(--logo-scale, 1.18)));
     }
 }
 
