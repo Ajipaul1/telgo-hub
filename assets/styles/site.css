@@ -558,10 +558,6 @@ h2 {
     max-width: none;
 }
 
-.director-note h2 {
-    max-width: 12ch;
-}
-
 .director-note > p {
     color: var(--text-muted);
 }
@@ -4245,10 +4241,6 @@ main > section {
         margin-top: 14px;
         padding-top: 14px;
         font-size: 0.95rem;
-    }
-
-    .director-note h2 {
-        max-width: 11ch;
     }
 
     .director-signoff {
