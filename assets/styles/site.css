@@ -3891,3 +3891,120 @@ main > section {
         display: none;
     }
 }
+
+/* Responsive layout corrections: keep the header edge-to-edge, anchor hero copy left, and stop stats from covering the CTA. */
+.site-header .container {
+    width: 100%;
+    max-width: none;
+}
+
+.site-header {
+    padding-inline: clamp(8px, 1.2vw, 18px);
+}
+
+.header-shell {
+    width: 100%;
+}
+
+.hero {
+    min-height: max(760px, 100vh);
+    min-height: max(760px, 100svh);
+    padding-bottom: clamp(40px, 6vh, 84px);
+}
+
+.hero-grid,
+.hero-stats-wrap {
+    width: calc(100% - clamp(24px, 6vw, 112px));
+    max-width: none;
+}
+
+.hero-grid {
+    grid-template-columns: minmax(0, clamp(320px, 42vw, 760px)) minmax(0, 1fr);
+    column-gap: clamp(24px, 5vw, 96px);
+    justify-items: start;
+    min-height: clamp(500px, 68vh, 760px);
+}
+
+.hero-copy,
+.hero-copy h1,
+.hero-lead {
+    max-width: none;
+    margin-left: 0;
+    text-align: left;
+}
+
+.hero-actions {
+    justify-content: flex-start;
+}
+
+.hero-stats-wrap {
+    margin-top: clamp(28px, 4vh, 54px);
+}
+
+.hero-media img {
+    object-position: right center;
+}
+
+@media (max-width: 1180px) {
+    .hero-grid,
+    .hero-stats-wrap {
+        width: calc(100% - 32px);
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, min(100%, 640px));
+        min-height: auto;
+    }
+
+    .hero-copy {
+        max-width: min(100%, 640px);
+    }
+}
+
+@media (max-width: 960px) {
+    .site-header .container {
+        width: 100%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-bottom: 38px;
+    }
+
+    .hero-grid,
+    .hero-stats-wrap {
+        width: calc(100% - 24px);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .hero-stats-wrap {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-grid,
+    .hero-stats-wrap {
+        width: calc(100% - 18px);
+    }
+
+    .site-header .container {
+        width: 100%;
+    }
+
+    .hero {
+        padding-bottom: 30px;
+    }
+
+    .hero-stats-wrap {
+        margin-top: 18px;
+    }
+
+    .hero-media img {
+        object-position: 68% center;
+    }
+}
