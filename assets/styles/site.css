@@ -3589,10 +3589,10 @@ h2 {
 }
 
 .logo-card--asset {
-    --logo-width: 82%;
-    --logo-height: 82%;
+    --logo-width: 100%;
+    --logo-height: 100%;
     --logo-scale: 1;
-    --logo-hover-scale: 1.05;
+    --logo-hover-scale: 1.02;
 }
 
 .logo-card--goodearth {
